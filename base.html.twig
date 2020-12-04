@@ -11,6 +11,53 @@
 </head>
 
 <body>
+{% block header %}
+
+    <div class="app-header">
+      
+        <img src="./public/images/logo.png" alt="logo" class="rounded-circle">
+  
+          <h2>Yoga Time</h2>
+    </div>
+        <div class="barreNav"></div>
+        </div>  
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img src="./public/images/logo2.png" alt="petit logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./templates/home.twig">Accueil</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/home.twig">Cours</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="/templates/home.twig">Planning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/home.twig">Equipe</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="./templates/price.twig">Tarifs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/home.twig">Contact</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/templates/home.twig">Abonné(e</a>
+        </li>     
+      </ul>
+    </div>
+</nav>
+ <div class="barreStyle"></div>
+    
+
+{% endblock %}
 
 {% block body %}{% endblock %}
 
