@@ -1,0 +1,6 @@
+{
+    "name": "tom/projet5yoga",
+    "require": {
+        "twig/twig": "3.0"
+    }
+}
