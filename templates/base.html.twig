@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,21 +37,24 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=lessons">Cours</a>
         </li>
-            <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="index.php?p=planning">Planning</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=team">Equipe</a>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="index.php?p=price">Tarifs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=contact">Contact</a>
         </li>
-           <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="index.php?p=subscriber">Abonné(e</a>
-        </li>     
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?p=registration">Inscription</a>
+        </li> 
       </ul>
     </div>
 </nav>
@@ -58,10 +65,11 @@
   <div>
      <p class="title2 text-center">Contact</p>
         <div class="container-fluid">
-            <div class="row footer text-center">
+            <div class="row text-center">
                 <div class="col-md-4 col-sm-12">
-                    <div>
+                    
                         <img src="./public/images/tapis1.jpg" alt="portion de tapis" class="rounded mx-3 my-3">
+                       <div class="contact"> 
                         <a href="#"><img src="./public/images/f_logo_RGB-White_58.png" alt="logo facebook" class="adresse rounded mx-3 my-3" width="63 px"></a>
                     </div>
                 </div>
@@ -76,8 +84,9 @@
                 </div>
 
                <div class="col-md-4 col-sm-12">
-                    <div>
+                   
                         <img src="./public/images/tapis3.jpg" alt="portion de tapis" class="rounded mx-3 my-3">
+                        
                         <a href="#"><img src="./public/images/instagram-logo-white.png" alt="logo instagram" class=" adresse rounded mx-3 my-3" width="63 px"></a>
                     </div>
                 </div>

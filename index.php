@@ -37,6 +37,9 @@ switch ($page) {
     case 'subscriber':
         echo $twig->render('/subscriber.twig');
     break;
+    case 'registration':
+        echo $twig->render('/registration.twig');
+    break;
     default:
         header('HTTP/1.0 404 Not Found');
         echo $twig->render('/404.twig');
