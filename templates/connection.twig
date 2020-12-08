@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planning{% endblock %}
+
+{% block body %}
+
+ <section>    
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3"> 
+                <h2>Accès membre</h2>
+
+                    <form action="./index.php?action=member" method="post">       
+                    <label>Pseudonyme</label><br/>
+                    <input type="text" name="pseudoconnect"><br/>
+                    <label>Mot de passe</label><br/> 
+                    <input type="password" name="pwdconnect"><br/><br/>
+                    <button type="submit" name="formconnect" class="rounded-pill px-5 btn btn-secondary ">Connexion</button>
+                    </form><br/>
+
+                        <p>Nouveau Membre <a href="index.php?p=registration">Inscrivez-vous</a></p> 
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
