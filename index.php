@@ -1,4 +1,5 @@
 <?php
+session_start();
 require __DIR__ . '/vendor/autoload.php';
 require('controller/frontend.php');
 
@@ -10,6 +11,10 @@ $twig = new Environment($loader, [
     'cache' => false,
 ]);
 
+$twig->addGlobal('session', $_SESSION);
+if (isset($_POST['pseudo'])) {
+$_POST['pseudo']=$_SESSION['pseudo'];}
+
 // barre de navigation
 
 if (isset($_GET['p'])) {
@@ -18,10 +23,10 @@ if (isset($_GET['p'])) {
 
     switch ($page) {
         case 'home':
-            echo $twig->render('/home.twig');
+            echo $twig->render('home.twig');
         break;
         case 'lessons':
-            echo $twig->render('/lessons.twig');
+            echo $twig->render('lessons.twig');
         break;
         case 'planning':
             echo $twig->render('planning.twig');
@@ -43,6 +48,11 @@ if (isset($_GET['p'])) {
         break;
         case 'responsivePlayer':
             echo $twig->render('responsivePlayer.twig');
+        break;
+        case 'logOut':
+              session_unset ();
+              session_destroy();
+              header('location:index.php?p=home');
         break;
         default : 
             header('HTTP/1.0 404 Not Found');
@@ -95,8 +105,8 @@ if (isset($_GET['p'])) {
                                $isPasswordCorrect = password_verify($pwdconnect, $resultat['pass']);
                                 if (isset($resultat) && ($resultat && $isPasswordCorrect)) {
                     
-            //                             $_SESSION['pseudo'] = $resultat['pseudo'];
-            //                             $_SESSION['role'] = $resultat['role'];
+                                        $_SESSION['pseudo'] = $resultat['pseudo'];
+                                        $_SESSION['role'] = $resultat['role'];
                                         header('location:index.php?p=responsivePlayer'); 
                                     
                                 }
