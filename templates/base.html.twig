@@ -15,7 +15,9 @@
         <img src="./public/images/logo.png" alt="logo" class="rounded-circle">
   
           <h2>Yoga Time</h2>
+          
     </div>
+     
         <div class="barreNav"></div>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="index.php?p=home"><img src="./public/images/logo2.png" alt="petit logo"></a>
@@ -52,10 +54,16 @@
         </li> 
       </ul>
     </div>
-</nav>
- <div class="barreStyle"></div>
+  </nav>
+
+{% if session.pseudo %}
+    <p id="salutation">Bonjour {{session.pseudo}} <a href="index.php?p=logOut" class="lien">Déconnexion</a></p>
+{% endif %}
     
-{% block body %}{% endblock %}
+  <div class="barreStyle"></div>
+
+
+  {% block body %}{% endblock %}
 
   <div>
      <p class="title2 text-center">Contact</p>
