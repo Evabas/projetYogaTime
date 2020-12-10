@@ -1,7 +1,5 @@
 <?php
 
-// Chargement des classes
-
 require_once('./model/MemberManager.php');
 
 function member()

@@ -1,5 +1,6 @@
 {
     "name": "tom/projet5yoga",
+    "description": "projet étudiant en php, html, css",
     "require": {
         "twig/twig": "3.0"
     }
