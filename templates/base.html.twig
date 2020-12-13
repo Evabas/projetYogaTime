@@ -35,6 +35,11 @@
           <a class="nav-link" href="index.php?p=lessons">Cours</a>
         </li>
         <li class="nav-item">
+        {% if session.role == "user" or session.role == "admin" %}
+        <a class="nav-link" href="index.php?p=responsivePlayer">Vidéos</a>
+        {% endif %}    
+        </li> 
+        <li class="nav-item">
           <a class="nav-link" href="index.php?p=planning">Planning</a>
         </li>
         <li class="nav-item">
@@ -48,9 +53,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=connection">Connexion</a>
-        </li> 
+        </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?p=registration">Inscription</a>
+         {% if session.role == "admin" %}
+          <a class="nav-link" href="index.php?p=admin">Administration</a>
+         {% endif %}  
         </li> 
       </ul>
     </div>
