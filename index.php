@@ -12,8 +12,6 @@ $twig = new Environment($loader, [
 ]);
 
 $twig->addGlobal('session', $_SESSION);
-if (isset($_POST['pseudo'])) {
-$_POST['pseudo']=$_SESSION['pseudo'];}
 
 // barre de navigation
 
@@ -53,6 +51,10 @@ if (isset($_GET['p'])) {
               session_unset ();
               session_destroy();
               header('location:index.php?p=home');
+        break;
+        case 'admin':
+            //  if (isset($_SESSION['role']) && $_SESSION['role'] == "admin") {}
+             echo $twig->render('admin.twig');
         break;
         default : 
             header('HTTP/1.0 404 Not Found');
