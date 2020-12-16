@@ -1,6 +1,7 @@
 <?php
+use model\Manager as Manager;
 
-require __DIR__ . '/Manager.php';
+namespace model;
 
 class MemberManager extends Manager
 {
