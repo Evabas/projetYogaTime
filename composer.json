@@ -3,5 +3,10 @@
     "description": "projet étudiant en php, html, css",
     "require": {
         "twig/twig": "3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "model\\": "./model"
+        }
     }
 }
